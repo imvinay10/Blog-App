@@ -8,14 +8,14 @@ import { User } from './users/user.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'postgres', // Set the database type to PostgreSQL
-      host: 'localhost', // Your PostgreSQL host
-      port: 5432, // Default PostgreSQL port
-      username: 'postgres', // Your PostgreSQL username
-      password: 'root', // Your PostgreSQL password
-      database: 'postgres', // Your PostgreSQL database name
+      type: 'postgres',
+      host: 'localhost',
+      port: 5433,
+      username: 'postgres',
+      password: 'root',
+      database: 'postgres',
       entities: [User],
-      synchronize: true, // Set to false in production
+      synchronize: true,
     }),
     AuthModule,
     UsersModule,
